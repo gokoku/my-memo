@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+
+.btn-blue {
+  @apply bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg;
+}
+.btn-blue:hover {
+  @apply bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg;
+}
+.btn-red {
+  @apply bg-red-500 text-white font-semibold py-2 px-4 rounded-lg;
+}
+.btn-blue:hover {
+  @apply bg-red-700 text-white font-semibold py-2 px-4 rounded-lg;
+}
+.input-text {
+  @apply bg-white shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight;
+}
+.input-text:focus {
+  @apply outline-none shadow-outline;
+}
+
+@tailwind utilities;
