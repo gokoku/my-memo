@@ -1,6 +1,6 @@
 # my-memo
 
-![view](https://github.com/gokoku/my-memo/blob/images/image.png)
+![image](https://user-images.githubusercontent.com/4346344/94410346-3f230c00-01b2-11eb-952a-813389f25133.png)
 
 ## Build Setup
 
