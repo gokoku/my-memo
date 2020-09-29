@@ -1,27 +1,27 @@
 <template>
-  <div class="flex flex-col items-left max-w-1/2 m-10 px-3 py-4">
-    <h1 class="text-xl font-bold">Memo</h1>
-    <div class="border round-lg px-2 py-4">
+  <div class="mx-auto flex flex-col items-left max-w-sm m-10 px-3 py-2 shadow-lg bg-gray-100 rounded-lg">
+    <h1 class="text-5xl text-gray-500 font-serif">Memorize</h1>
+    <div class="border round-lg px-2 py-4 shadow-lg">
       <div class="mb-3">
-        <h2 class="text-base font-bold mr-3">Title</h2>
         <input
           class="input-text w-3/4 mr-3 mb-3"
           type="text"
           name="title"
+          placeholder="Title"
           v-model="title"
           @focus="set_flg"
         >
         <button
-          class="btn-blue"
+          class="btn-blue shadow-sm"
           @click="find"
         >find</button>
       </div>
 
       <div class="mb-3">
-        <h2 class="text-base font-bold mr-3">Memo</h2>
         <textarea
-          class="input-text w-full mr-3"
+          class="input-text w-full mr-3 h-32"
           name="memo"
+          placeholder="Memo"
           v-model="content"
           @focus="set_flg"
         />
@@ -29,7 +29,7 @@
 
       <div class="mb-3">
         <button
-          class="btn-blue"
+          class="btn-blue shadow-sm"
           @click="insert"
         >save</button>
         <button
@@ -42,15 +42,24 @@
 
     <div class="border round-lg px-2 py-3 mt-4">
       <div class="w-full py-3 text-center">
-        <span v-show="!prev_page" class="text-white bg-green-200 rounded px-2 py-2">◀</span> &nbsp;
-        <span v-show="prev_page" class="text-white bg-green-500 rounded px-2 py-2" @click="prev">◀</span> &nbsp;
+        <span v-show="!prev_page" class="text-white bg-green-200 rounded px-4 py-2">◀</span>
+        <span v-show="prev_page" class="text-white bg-green-500 rounded px-4 py-2" @click="prev">◀</span>
 
-        <span v-show="!next_page" class="text-white bg-green-200 rounded px-2 py-2">▶</span>
-        <span v-show="next_page" class="text-white bg-green-500 rounded px-2 py-2" @click="next">▶</span>
+        <span v-show="!next_page" class="text-white bg-green-200 rounded px-4 py-2">▶</span>
+        <span v-show="next_page" class="text-white bg-green-500 rounded px-4 py-2" @click="next">▶</span>
       </div>
       <ul class="list">
-        <li v-for="(item, index) in page_items" :key="index">
-          <span @click="select(item)">{{ item.title }} ({{ item.created }})</span>
+        <li
+          class="input-text"
+          v-for="(item, index) in page_items" :key="index">
+          <p @click="select(item)" >
+            <span class="text-xs text-gray-500 mr-2">
+              {{ item.created }}
+            </span>
+            <span class="text-base font-bold font-serif text-gray-700">
+              {{ item.title }}
+            </span>
+          </p>
         </li>
       </ul>
     </div>

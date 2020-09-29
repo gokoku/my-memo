@@ -14,7 +14,7 @@
   @apply bg-red-700 text-white font-semibold py-2 px-4 rounded-lg;
 }
 .input-text {
-  @apply bg-white shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight;
+  @apply bg-white shadow-lg appearance-none border rounded py-2 px-3 text-gray-700 leading-tight;
 }
 .input-text:focus {
   @apply outline-none shadow-outline;

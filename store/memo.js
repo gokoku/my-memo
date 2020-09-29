@@ -7,8 +7,8 @@ export const state = () => ({
 
 export const mutations = {
   insert(state, obj) {
-    if (obj.title === "" || obj.content === "") return;
-    var date = moment().format("YYYY-MM-DD hh:mm");
+    if (obj.title === "") return;
+    var date = moment().format("MM/DD hh:mm");
     state.memo.unshift({
       title: obj.title,
       content: obj.content,
