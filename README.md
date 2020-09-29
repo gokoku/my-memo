@@ -23,5 +23,7 @@ $ yarn generate
 push と同時に Action で静的サイトを generate するようにしたので、
 dist に生成したファイルが GitHub Page にパブリッシュされる。
 
+https://gokoku.github.io/my-memo/
 
+---
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
