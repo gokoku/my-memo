@@ -6,31 +6,24 @@ on:
       - master
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
 
     - name: setup node
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
 
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-
     - name: install
-      run: yarn ci
+      run: yarn install
 
     - name: test
       run: yarn test
 
     - name: generate
-      run: yarn run generate
+      run: yarn generate
 
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
