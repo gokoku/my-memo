@@ -18,5 +18,10 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
+## GitHub Action で自動デプロイ
+
+push と同時に Action で静的サイトを generate するようにしたので、
+dist に生成したファイルが GitHub Page にパブリッシュされる。
+
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
