@@ -17,6 +17,7 @@
     "vuex-persistedstate": "^3.1.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
     "@nuxtjs/tailwindcss": "^3.1.0",
     "@vue/test-utils": "^1.0.3",
     "babel-core": "7.0.0-bridge.0",
